@@ -8,12 +8,15 @@
 </head>
 <body>
     <header>
-        <h1 class="title">A Year to Remember: My Freshman Adventures</h1>
+        <h1 class="title">Welcome to My First Year Memories</h1>
     </header>
+
+    <section class="description">
+        <p>Welcome to my gallery of cherished memories from my first year of college! This collection captures the laughter, friendships, and unforgettable moments shared with my friends as we navigated the exciting journey of freshman year together. Each photo tells a story of joy, camaraderie, and growth. I hope these images bring back as many fond memories for you as they do for me!</p>
+    </section>
+
     <main>
-        <section class="description">
-            <p>Welcome to my gallery of cherished memories from my first year of college! This collection captures the laughter, friendships, and unforgettable moments shared with my friends as we navigated the exciting journey of freshman year together. Each photo tells a story of joy, camaraderie, and growth. I hope these images bring back as many fond memories for you as they do for me!</p>
-        </section>
+        <!-- Gallery Grid -->
         <section class="gallery">
             <div class="gallery-item item1"><img src="image1.jpg" alt="Memory 1"></div>
             <div class="gallery-item item2"><img src="image2.jpg" alt="Memory 2"></div>
@@ -25,6 +28,37 @@
             <div class="gallery-item item8"><img src="image8.jpg" alt="Memory 8"></div>
             <div class="gallery-item item9"><img src="image9.jpg" alt="Memory 9"></div>
         </section>
+
+        <!-- Video Slider Section -->
+        <section class="video-slider">
+            <h2>Video Highlights</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <video class="video-slide">
+                            <source src="video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="slide">
+                        <video class="video-slide">
+                            <source src="video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="slide">
+                        <video class="video-slide">
+                            <source src="video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
