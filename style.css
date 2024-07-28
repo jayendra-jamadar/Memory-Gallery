@@ -1,0 +1,139 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Description Section */
+.description {
+    text-align: center;
+    padding: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Main Section */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 15px;
+    width: 80%;
+    max-width: 1200px;
+    grid-template-areas:
+        "item1 item2 item2 item3"
+        "item4 item5 item5 item6"
+        "item7 item8 item8 item9";
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Gallery Items */
+.gallery-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Specific Styling for Gallery Items */
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item6 { grid-area: item6; }
+.item7 { grid-area: item7; }
+.item8 { grid-area: item8; }
+.item9 { grid-area: item9; }
+
+/* Ensure specific items span multiple rows */
+.item4 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.item5 {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
